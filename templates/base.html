@@ -1,0 +1,209 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Trivago</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+</head>
+<body>
+   <div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">Trivago</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link " href="index">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link  " href="about">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link   " href="services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="contact">Contact us</a>
+              
+            </ul>
+           
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link  " href="login">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  " href="register">Register</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <div id="img" style="background-image: url({% static "images/santo.jpg" %}); height:100vh; background-size:cover;">
+        <div class="text-layer">
+            <div class="text">Let us Explore</div>
+          </div>
+          
+          <div class="header">
+            <h1>Search for your trip</h1>
+        </div>
+          <div class="cards" id="cards">
+            <div class="card" id="card" id ="card"><input type="text" placeholder="City"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Depature"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Arrival"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Budget"></div>
+            <div class="card" id="card" id ="card"><button type="submit">SEARCH</button></div>
+          </div>
+          <div class="social">
+            <div></div>
+                    <a class="nav-link  " href="#containerc">Offers 01</a>
+                    <a class="nav-link  " href="#latest">Latest 02</a>
+                    <a class="nav-link  " href="#testimonials">Testimonials 03</a>
+                    
+          </div>
+</div>
+<div class="container" id="containerc">
+        <h1 style=" font-size: 60px;text-align: center;padding: 50px;">Offers</h1>
+        <p style=" font-size: 30px;text-align: center;padding: 0px;">Save on your next trip with these exclusive card offers from our partner banks and hotels.</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" id="cardc" >
+                    <img src="https://www.easemytrip.com/images/offer-img/hdfc-7jan21-lp.png" class="card-img-top" alt="Bank logo">
+                    <div class="card-body" id="cardc-body">
+                        <h5 class="card-title">Hdfc Bank</h5>
+                        <p class="card-text">Get 10% off your next flight when you book with your Bank Name credit card.</p>
+                        <a href="#" class="btn btn-dark">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" id="cardc">
+                    <img src="https://www.easemytrip.com/images/hotel-img/grab20-28apr-mob2.png" class="card-img-top" alt="Hotel logo">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotels</h5>
+                        <p class="card-text">Stay for 3 nights and get the 4th night free when you book your hotel with your Bank Name credit card.</p>
+                        <a href="#" class="btn btn-dark">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" id="cardc">
+                    <img src="https://www.adanione.com/-/media/Project/Campaigns/Valentine-s-Day/Loyalty-Homepage-Services/Tiles_Scroll_Holiday_Booking.png" class="card-img-top" alt="Extra offer logo">
+                    <div class="card-body">
+                        <h5 class="card-title">Extra Offer</h5>
+                        <p class="card-text">Earn 1% points on all travel purchases made with your Bank Name credit card.</p>
+                        <a href="#" class="btn btn-dark">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>These offers are for a limited time only, so don't miss out! Book your next trip today and save with these exclusive card offers.</p>
+    </div>
+<section id ="latest">
+    
+    <p style="font-size: 20px; padding-top: 40px; text-align: center;font-weight: lighter;">Simply Amazing places</p>
+    <p style=" font-size: 60px;text-align: center;padding: 0px;">Popular Destinations</p>
+    <div class="row row-cols-1 row-cols-md-3 g-0" style="padding: 10px;">
+        {% for dest in dests %}
+      <div class="col p-5" >
+        <div class="card" id="cardt" >
+          <img src="{{dest.img.url}}" class="card-img-top">
+          <div class="card-body" id="cardt-body">
+            <h5 class="card-title" id="cardt-title">{{dest.name}}</h5>
+            <p class="card-title" id="cardt-title">
+              {{dest.desc}}
+            </p>
+            <div class="destination_price"> <a href="contact" class="btn btn-dark">From ₹ {{dest.price}}</a></div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+</section>
+<section id="testimonials">
+<p style = "font-size: 40px; text-align: center; padding-top: 50px;">Users about Trivago</p>
+<div class="card" id="cardt">
+  <div class="card-body" id="cardt-body">
+    <p class="card-title" id="cardt-title">
+      
+      I had the most amazing time on my trip to Thailand, booked through [travel website name]. The itinerary was perfect, the hotels were beautiful, and the tour guides were knowledgeable and friendly. I would definitely recommend this website to anyone looking for a hassle-free and unforgettable vacation.
+    </p>
+    <h5 class="card-title" id="cardt-title">
+      
+        <img style="height:100px;" src="https://img.freepik.com/free-photo/portrait-young-beautiful-woman-with-smoky-eyes-makeup-pretty-young-adult-girl-posing-studio-closeup-attractive-female-face_186202-4439.jpg" alt="Testimonial image" class="img-fluid rounded-circle">
+        ...Sarah Jones
+    </h5>
+  </div>
+</div>
+
+<div class="card" id="cardt">
+  <div class="card-body" id="cardt-body">
+    <p class="card-title" id="cardt-title">
+      My family and I just returned from our dream vacation to Hawaii, thanks to [travel website name]. The booking process was easy and the customer service was excellent. We had a wonderful time exploring the islands and creating memories that will last a lifetime.
+    </p>
+    <h5 class="card-title" id="cardt-title">
+      <img style="height:100px; width: 100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk_LoIs_AKO9nQ8nYbaQWYhlc3QaBMz1Ppyw&usqp=CAU" alt="Testimonial image" class="img-fluid rounded-circle">
+      ...David Miller
+
+    </h5>
+  </div>
+</div>
+
+<div class="card" id="cardt">
+  <div class="card-body" id="cardt-body">
+    <p class="card-title" id="cardt-title">
+      I'm a solo traveler and I've used [travel website name] to book several trips over the past few years. I've always had a great experience. The website is easy to use, the prices are competitive, and the customer service is top-notch. I highly recommend this website to any traveler, whether you're traveling solo or with a group.
+    </p>
+    <h5 class="card-title" id="cardt-title" >
+      <img style="height:100px;width: 100px;" src="https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg" alt="Testimonial image" class="img-fluid rounded-circle">
+      ...Susan Williams
+    </h5>
+  </div>
+</div>
+</section>
+
+<footer class="footer" style="background-image: url({% static "images/couple.jpg" %}); background-size:cover; height: 70vh; color: white;">
+  <div class="container" id="foot">
+    <div class="row" id="foo">
+        <h3 class="footer-title">Subscribe to our newsletter to get the latest trends & news</h3>
+        <br>
+        <input type="name"  id="in1" class="form-control" placeholder="Name">
+        <input type="email" id="in2" class="form-control" placeholder="Your email address">
+        <button type="submit" id="in3" class="btn btn-primary">Subscribe</button>
+      </div>
+         
+        <h3 class="footer-title1" style="padding-top: 40px;">About us</h3>
+        <p style="font-size: 20px;font-weight: bolder;"> We are a travel company that specializes in providing unique and unforgettable travel experiences. We offer a wide range of tours and packages to suit all budgets and interests.</p>
+        <a href="#" style="text-decoration: none; color: white; font-size: larger;">Learn more</a>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  window.addEventListener('scroll', function() {
+  var navBar = document.querySelector('.navbar');
+  if (window.scrollY > 100) {
+    navBar.classList.add('scrolling');
+  } else {
+    navBar.classList.remove('scrolling');
+  }
+});
+
+</script>
+</body>
+</html>

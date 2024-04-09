@@ -1,0 +1,186 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Trivago</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+</head>
+<body>
+   <div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">Trivago</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link " href="index">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link  " href="about">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link   " href="services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="contact">Contact us</a>
+              
+            </ul>
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {% if username %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#{{ username}}">{{ username }}</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="login">Logout</a>
+                      </li>
+           {% else %}
+<li class="nav-item">                
+    <a class="nav-link  " href="login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  " href="register">Register</a>
+  </li>
+{% endif %}
+               
+                </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <div id="img" style="background-image: url({% static "images/bridge.jpg" %}); height:90vh; background-size:cover;background-repeat: no-repeat;">
+        <div class="text-layer">
+            <div class="text">Let us Explore</div>
+          </div>
+          
+          <div class="header">
+            <h1>Search for your trip</h1>
+        </div>
+          <div class="cards" id="cards">
+            <div class="card" id="card" id ="card"><input type="text" placeholder="City"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Depature"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Arrival"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Budget"></div>
+            <div class="card" id="card" id ="card"><button type="submit">SEARCH</button></div>
+          </div>
+</div>
+
+  </div>
+</div>
+
+  
+<header class="container-fluid py-5" >
+    <h1 class="text-center">About Us</h1>
+  </header>
+
+  <main class="container" style="font-size:25px;">
+    <div class="col">
+        <h2>Our Story</h2>
+        <p>Travel Website is a travel booking website founded in 2023 by four passionate travelers: Harish,Aswik,Vasudevan ,and Abishek. We started the company because we believe that everyone deserves the opportunity to experience the world and create memories that will last a lifetime.</p>
+
+        <p>We have all traveled extensively ourselves, and we know firsthand how exciting and life-changing travel can be. We have also seen how travel can help to break down barriers and build understanding between different cultures.</p>
+        
+        <p>That's why we are dedicated to making travel more accessible and enjoyable for everyone. We offer a wide range of travel options to fit every budget and interest, and we are always looking for new and innovative ways to make travel easier and more rewarding for our customers.</p>
+        
+        <p>We are also committed to sustainable and ethical travel. We partner with responsible travel companies and support local communities in the destinations that we serve. We believe that travel should be a positive experience for everyone involved, including the people who live in the places that we visit.</p>
+        
+        <p>We are excited to help our customers plan and book their dream vacations. We believe that travel is one of the best things that you can do for yourself, and we are committed to making travel as accessible and enjoyable as possible for everyone.</p> 
+      </div>
+    <section class="row">
+      <div class="col-md-12">
+        <h2>Our Team</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <img src="{% static 'images/harish.jpg' %}" alt="Owner 1" class="img-fluid rounded-circle">
+            <h3 class="text-center">Harish P</h3>
+            <p>Hari is a passionate traveler with over 10 years of experience in the travel industry. He is known for his expertise in planning custom itineraries and providing his clients with the best possible travel experience.</p>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/vasu.jpg' %}" alt="Owner 2" class="img-fluid rounded-circle">
+            <h3 class="text-center">Vasudevan M</h3>
+            <p>Vasu is a seasoned traveler and travel blogger. He is known for her love of adventure and her ability to find the hidden gems of any destination.</p>
+
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/aswik.jpg' %}" alt="Owner 3" class="img-fluid rounded-circle">
+            <h3 class="text-center">Aswik M</h3>
+            <p>Aswik is a travel photographer with a keen eye for capturing the beauty of the world. He is known for his stunning travel photos and his ability to transport viewers to new and exciting places.</p>
+          </div>
+
+          <div class="col-md-3">
+            <img src="{% static 'images/abi.jpg' %}" alt="Owner 4" class="img-fluid rounded-circle">
+            <h3 class="text-center">Abishek D</h3>
+            <p>Abi is a travel writer with a knack for storytelling. He is known for her engaging travel articles and her ability to inspire readers to explore the world.</p>
+        </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="mb-3">Our Mission</h2>
+        <p>Our mission is to make travel accessible and enjoyable for everyone. We believe that everyone deserves the opportunity to experience the world and create memories that will last a lifetime. That's why we offer a wide range of travel options to fit every budget and interest.</p>
+
+        <p>We are also committed to making travel more sustainable and ethical. We partner with responsible travel companies and support local communities in the destinations that we serve. We also educate and inspire our customers about the world and its diverse cultures.</p>
+        
+        <p>We believe that travel is a powerful tool for understanding and respecting different cultures. It can also help us to learn more about ourselves and the world around us. We are committed to making travel more accessible to everyone, so that everyone can have the opportunity to experience its many benefits.</p>
+      </section>
+
+    <section class="row mt-5">
+      <div class="col-md-12">
+        <h2>Our Achievements</h2>
+        <ul>
+            <li>Helped over 100,000 travelers book their dream vacations</li>
+            <li>Won the "Best Travel Website" award from the Travel Industry Association in 2024</li>
+            <p>Featured in Forbes, The New York Times, and other major publications</p>
+            <li>Achieved a 95% customer satisfaction rating</li>
+            <li>Partnered with major travel brands such as Expedia, Booking.com, and Airbnb</li>
+            <li>Donated $100,000 to the World Wildlife Fund to support sustainable tourism initiatives</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+
+<footer class="footer" style="background-image: url({% static "images/couple.jpg" %}); background-size:cover; height: 70vh; color: white;">
+  <div class="container" id="foot">
+    <div class="row" id="foo">
+        <h3 class="footer-title">Subscribe to our newsletter to get the latest trends & news</h3>
+        <br>
+        <input type="name"  id="in1" class="form-control" placeholder="Name">
+        <input type="email" id="in2" class="form-control" placeholder="Your email address">
+        <button type="submit" id="in3" class="btn btn-primary">Subscribe</button>
+      </div>
+         
+        <h3 class="footer-title1" style="padding-top: 40px;">About us</h3>
+        <p style="font-size: 20px;font-weight: bolder;"> We are a travel company that specializes in providing unique and unforgettable travel experiences. We offer a wide range of tours and packages to suit all budgets and interests.</p>
+        <a href="#" style="text-decoration: none; color: white; font-size: larger;">Learn more</a>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  window.addEventListener('scroll', function() {
+  var navBar = document.querySelector('.navbar');
+  if (window.scrollY > 100) {
+    navBar.classList.add('scrolling');
+  } else {
+    navBar.classList.remove('scrolling');
+  }
+});
+
+</script>
+</body>
+</html>

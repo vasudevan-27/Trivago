@@ -1,0 +1,182 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Trivago</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/contact.css' %}">
+</head>
+
+<body>
+   <div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">Trivago</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link " href="index">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link  " href="about">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link   " href="services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " href="contact">Contact us</a>
+              
+            </ul>
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {% if username %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#{{ username}}">{{ username }}</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="login">Logout</a>
+                      </li>
+           {% else %}
+<li class="nav-item">                
+    <a class="nav-link  " href="login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  " href="register">Register</a>
+  </li>
+{% endif %}
+               
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <div id="img" style="background-image: url({% static "images/city.jpg" %}); height:80vh; background-size:cover;">
+        <div class="text-layer">
+            <div class="text">Let us Explore</div>
+          </div>
+          
+          <div class="header">
+            <h1>Search for your trip</h1>
+        </div>
+          <div class="cards" id="cards">
+            <div class="card" id="card" id ="card"><input type="text" placeholder="City"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Depature"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Arrival"></div>
+            <div class="card" id="card" id ="card"><input type="text" placeholder="Budget"></div>
+            <div class="card" id="card" id ="card"><button type="submit">SEARCH</button></div>
+          </div>
+</div>
+<div class="container" id="contact" style="padding-top:30px;padding-bottom:30px"> 
+    <div class="row">
+        <div  class="col-sm-6";>
+
+            <h1>Get in Touch with Us</h1>
+
+            <p style=font-size:20px>We love hearing from our customers! If you have any questions, comments, or suggestions, please don't hesitate to contact us. We're here to help!</p>
+            <a href="#" class="twitter btn">
+                <button type="button" class="btn btn-dark">Address</button>
+              </a>
+              <p> 123 Main Street, T Nagar, Chennai, Tamil Nadu-600017</p>
+              <a href="#" class="twitter btn">
+                <button type="button" class="btn btn-dark">Phone</button>
+              </a>
+              <p> 1800-555-1212</p>
+              <a href="#" class="twitter btn">
+                <button type="button" class="btn btn-dark">Email</button>
+              </a>
+              <p>trivago@gmail.com</p>
+             
+          <form action="/action_page.php">
+            <div class="row" style=padding-top:10px>
+              <div class="connectbox">
+              <h2 style="color: black;  text-align:center" >Connect Us With Social Media</h2>
+            </div>
+              <div class="col">
+                <br>
+                <a href="#" class="fb btn">
+                  <button type="button" class="btn btn-primary">Connect with Facebook</button>
+                </a>
+                <a href="#" class="twitter btn">
+                  <button type="button" class="btn btn-dark">Connect in X</button>
+                </a>
+                <a href="#" class="google btn">
+                  <button type="button" class="btn btn-danger">Connect with instagram</button>              
+                </a>
+              </div> 
+            </div>
+          </form>
+      
+            <form>
+        </div>
+        <div class="col-sm-6">
+          <div id="right";>
+          <form action="action_page.php">
+            <h2>Contacts Us</h2>
+            <br>
+    
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+ 
+            <input type="text" id="lname" name="lastname" placeholder="Phone Number..">
+   
+            <select id="country" name="country">
+              <option value="australia">India</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+        
+            
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <button type="button" class="btn btn-dark">Send</button>
+        
+          </form>
+        </div>
+    </div>
+  
+      </div>
+    </div>
+</div>
+     
+       
+<footer class="footer1" style="background-image: url({% static "images/couple.jpg" %}); background-size:cover; height: 70vh; color: white;">
+  <div class="container" id="foot">
+    <div class="row" id="foo">
+        <h3 class="footer-title">Subscribe to our newsletter to get the latest trends & news</h3>
+        <br>
+        <input type="name"  id="in1" class="form-control" placeholder="Name">
+        <input type="email" id="in2" class="form-control" placeholder="Your email address">
+        <button type="submit" id="in3" class="btn btn-primary">Subscribe</button>
+      </div>
+         
+        <h3 class="footer-title1" style="padding-top: 40px;">About us</h3>
+        <p style="font-size: 20px;font-weight: bolder;"> We are a travel company that specializes in providing unique and unforgettable travel experiences. We offer a wide range of tours and packages to suit all budgets and interests.</p>
+        <a href="#" style="text-decoration: none; color: white; font-size: larger;">Learn more</a>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  window.addEventListener('scroll', function() {
+  var navBar = document.querySelector('.navbar');
+  if (window.scrollY > 100) {
+    navBar.classList.add('scrolling');
+  } else {
+    navBar.classList.remove('scrolling');
+  }
+});
+
+</script>
+</body>
+</html>
